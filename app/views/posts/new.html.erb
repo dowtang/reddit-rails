@@ -2,7 +2,10 @@
 
 
 
-<%= form_for @post, :method => :post do |f| %>
+<%= simple_form_for @post, :method => :post do |f| %>
+  
+  <h2><%= flash[:message] %></h2>
+
   <%= f.label :title %>
   <%= f.text_field :title %>
 
