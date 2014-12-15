@@ -3,6 +3,15 @@
 <h1>Email: <%= @post.user.email %></h1>
 <h1>Time: <%= @post.created_at %></h1>
 
+<h2><%= "Number of votes for this post: #{@post.post_votes.count}" %>
+</h2>
+
+<h1>
+  <%= link_to("THUMBS UP", "http://localhost:3000/post_votes/#{@post.id}", :method => :post, :class => "", :id => "") %>
+</h1>
+
+<%= button_to "Vote on Post with ID = 3", "http://localhost:3000/post_votes/3" %>
+
 <%= form_for @comment do |f| %>
   <%= f.label :content %>
   <%= f.text_field :content %>

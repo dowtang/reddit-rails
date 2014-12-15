@@ -19,6 +19,9 @@ Rails.application.routes.draw do
   resources :comments
   resources :users
 
+  # give the post :id, use the PostVote Controller to create a post
+  post 'post_votes/:id', to: 'post_votes#create'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
