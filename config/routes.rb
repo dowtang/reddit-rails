@@ -16,12 +16,13 @@ Rails.application.routes.draw do
   # get 'posts/new' => 'posts#new'
 
   resources :posts
-  resources :comments
+  # resources :comments
   resources :users
 
   # give the post :id, use the PostVote Controller to create a post
   post 'post_votes/:id', to: 'post_votes#create'
 
+  post 'comments/:id', to: 'comment#create'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

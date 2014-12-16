@@ -14,7 +14,9 @@ Number of votes for this post:
   <%= link_to("ADD A VOTE", "#", :class => "btn_vote", 'data-id' => @post.id) %>
 </h1>
 
-<%= button_to "Vote on Post with ID = 3", "http://localhost:3000/post_votes/3" %>
+<!-- <div id="comment_button">
+  <%= button_to "Vote on Post with ID = 3", "http://localhost:3000/post_votes/3" %>
+</div> -->
 
 <%= form_for @comment do |f| %>
   <%= f.label :content %>
@@ -23,7 +25,7 @@ Number of votes for this post:
   <%= f.text_field :post_id, :value =>
     @post.id, :hidden => true %>
 
-  <%= f.submit "submit new comment" %>
+  <%= f.submit "submit new comment", :id => "comment_button" %>
 <% end %>
 
 <h1>Comments</h1>

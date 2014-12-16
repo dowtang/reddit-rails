@@ -1,0 +1,22 @@
+$(document).ready(function(){
+
+  $('#comment_button').click(function(){
+    alert("Comment");
+    console.log('id:', $(this).data('id'));
+    e.preventDefault();
+
+    // $.ajax({
+    //   type: 'post',
+    //   beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+    //   url: '/post_votes/' + $(this).data('id'),
+    //   success: function(response,status){
+    //     if (status == 'success'){
+    //       num_votes = Number($('#vote_count').text());
+    //       num_votes++;
+    //       $('#vote_count').text(num_votes);
+    //     }
+    //   }
+    })
+  });
+
+});
