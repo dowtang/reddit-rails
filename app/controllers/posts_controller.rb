@@ -1,4 +1,9 @@
 class PostsController < ApplicationController
+  
+  # we are going to check the following conditions before we do any actions in this controller
+  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, except: [:index, :show]
+
   def index
     @posts = Post.all
     

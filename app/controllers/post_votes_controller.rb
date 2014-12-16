@@ -1,5 +1,5 @@
 class PostVotesController < ApplicationController
-  
+  before_action :authenticate_user!
   # skip_before_filter :
   #   verify_aunthenticity_token
 
