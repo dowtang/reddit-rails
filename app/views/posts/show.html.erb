@@ -7,7 +7,7 @@
 </h2>
 
 <h1>
-  <%= link_to("THUMBS UP", "http://localhost:3000/post_votes/#{@post.id}", :method => :post, :class => "", :id => "") %>
+  <%= link_to("ADD A VOTE", "#", :class => "btn_vote", 'data-id' => @post.id) %>
 </h1>
 
 <%= button_to "Vote on Post with ID = 3", "http://localhost:3000/post_votes/3" %>

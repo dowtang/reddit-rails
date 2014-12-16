@@ -1,5 +1,8 @@
 class PostVotesController < ApplicationController
   
+  # skip_before_filter :
+  #   verify_aunthenticity_token
+
   def create
     post = Post.find(params[:id])
 
