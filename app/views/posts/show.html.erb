@@ -33,10 +33,7 @@
 
   <tbody>
     <% @post.comments.each do |comment| %>
-      <tr>
-        <td><%= comment.content %></td>
-        <td><%= comment.user.email %></td>
-      </tr>
+      <%= render :partial => "comment", :locals => {:x => comment} %>
     <% end %>
   </tbody>
 </table>
