@@ -22,8 +22,7 @@ Rails.application.routes.draw do
   # give the post :id, use the PostVote Controller to create a post
   post 'post_votes/:id', to: 'post_votes#create'
 
-  post 'comments/:id', to: 'comment#create'
-  # Example of regular route:
+  post 'comments' => 'comments#create'   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
