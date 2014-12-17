@@ -12,7 +12,7 @@
 
 <%= button_to "Vote on Post with ID = 3", "http://localhost:3000/post_votes/3" %>
 
-<%= form_for @comment do |f| %>
+<%= form_for @comment, :remote => true do |f| %>
   <%= f.label :content %>
   <%= f.text_field :content %>
   
@@ -20,6 +20,7 @@
     @post.id, :hidden => true %>
 
   <%= f.submit "submit new comment" %>
+  <div id="error_message"></div>
 <% end %>
 
 <h1>Comments</h1>
@@ -31,9 +32,9 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody id="comments_list">
     <% @post.comments.each do |comment| %>
-      <%= render :partial => "comment", :locals => {:x => comment} %>
+      <%= render :partial => "comment", :locals => {:comment => comment} %>
     <% end %>
   </tbody>
 </table>

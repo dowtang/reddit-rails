@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   # get '/posts' => 'posts#index' 
 
-  get '/comments' => 'comments#index'
+  # get '/comments' => 'comments#index'
 
   get '/votes' => 'votes#index'
 

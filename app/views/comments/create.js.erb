@@ -1,0 +1,7 @@
+alert("hihi");
+
+var new_comment = "<%= raw escape_javascript(render partial: 'posts/comment', :locals => { :comment => @comment }) %>";
+
+$('#comments_list').prepend(new_comment);
+
+$('#comment_content').val("")
